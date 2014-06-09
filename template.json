@@ -40,7 +40,9 @@
   "provisioners": [{
     "type": "shell",
     "execute_command": "chmod +x {{.Path}}; sudo sh '{{.Path}}'",
-    "script": "postinstall.sh"
+    "scripts": [
+      "postinstall.sh"
+    ]
   }],
   "post-processors": [{
     "type": "vagrant",

@@ -1,7 +1,11 @@
 require 'spec_helper'
 
-def check_installed(package)
-  "nix-store -q --references /var/run/current-system/sw | grep #{package}"
+def check_installed(package, version=nil)
+  if version
+    "nix-store -q --references /var/run/current-system/sw | grep #{package}-#{version}"
+  else
+    "nix-store -q --references /var/run/current-system/sw | grep #{package}"
+  end
 end
 
 describe command(check_installed('gcc')) do

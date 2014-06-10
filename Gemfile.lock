@@ -15,13 +15,13 @@ GEM
       rspec-core (>= 2.99.0.beta1)
       rspec-expectations (>= 2.99.0.beta1)
     rspec-mocks (2.99.0)
-    serverspec (1.7.1)
+    serverspec (1.8.0)
       highline
       net-ssh
       rspec (~> 2.13)
       rspec-its
-      specinfra (~> 1.13)
-    specinfra (1.16.0)
+      specinfra (~> 1.17)
+    specinfra (1.17.0)
 
 PLATFORMS
   ruby
